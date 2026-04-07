@@ -24,18 +24,16 @@ body {
   margin: 0;
   background: linear-gradient(
     180deg,
-    #0e0c18 0%,
-    #1a1028 4%,
-    #1e1518 8%,
-    #221812 13%,       /* warm amber — visible on first load */
-    #2a1c14 22%,       /* warmest */
-    #281a14 32%,
-    #221814 42%,
-    #1a1410 55%,
-    #14100e 68%,
-    #0e0c14 84%,
-    #0a0a12 100%
-  ) no-repeat;
+    #2a1c14 0%,        /* warm amber right at top — visible on load */
+    #281a14 12%,
+    #221814 25%,       /* golden hour */
+    #1a1410 40%,
+    #14100e 55%,
+    #0e0c14 75%,
+    #0a0a12 100%       /* deep night at bottom */
+  );
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   background-attachment: scroll;
   font-family: var(--font-body);
   font-size: 18px;
