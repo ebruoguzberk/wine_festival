@@ -26,7 +26,10 @@ netlify deploy --prod --dir=dist --site=cf415a79-b04b-42c1-944d-2b1c1cff1711
 ```
 
 If `netlify` is not installed: `npm install -g netlify-cli`
-If not logged in: `netlify login` (opens browser auth flow)
+If not logged in:
+1. Run `netlify login` — it prints an Authorize URL
+2. Open the URL in browser and click Authorize
+3. Run `netlify login --check <ticket-id>` to complete
 Site ID: `cf415a79-b04b-42c1-944d-2b1c1cff1711`
 Live URL: https://engwall-wine-festival.netlify.app
 
