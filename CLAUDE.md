@@ -15,6 +15,21 @@ A single-page React app for the "Engwall Wine Festival - The Thousand & One Nigh
 
 No test framework is configured.
 
+## Deploying to Netlify
+
+`npm` and `netlify` are not on the default PATH. Always prefix with the full nvm node path:
+
+```bash
+export PATH="$HOME/.nvm/versions/node/v24.14.1/bin:$PATH"
+npm run build
+netlify deploy --prod --dir=dist --site=cf415a79-b04b-42c1-944d-2b1c1cff1711
+```
+
+If `netlify` is not installed: `npm install -g netlify-cli`
+If not logged in: `netlify login` (opens browser auth flow)
+Site ID: `cf415a79-b04b-42c1-944d-2b1c1cff1711`
+Live URL: https://engwall-wine-festival.netlify.app
+
 ## Architecture
 
 **Single-component frontend:** Almost all UI lives in `src/App.jsx` (~1300 lines) — a monolithic component containing:

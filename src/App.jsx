@@ -8,14 +8,17 @@ function useInView(options = {}) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    // Fallback: reveal after 2.5s in case IntersectionObserver doesn't fire (iOS Safari)
+    const fallback = setTimeout(() => setIsVisible(true), 2500);
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
+        clearTimeout(fallback);
         observer.unobserve(el);
       }
     }, { threshold: options.threshold || 0.05, rootMargin: options.rootMargin || "0px 0px 60px 0px" });
     observer.observe(el);
-    return () => observer.disconnect();
+    return () => { observer.disconnect(); clearTimeout(fallback); };
   }, []);
   return [ref, isVisible];
 }

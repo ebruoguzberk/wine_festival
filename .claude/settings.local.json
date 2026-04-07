@@ -69,7 +69,21 @@
       "Bash(PATH=\"/Users/ebruengwall/.nvm/versions/node/v24.14.1/bin:$PATH\" npx -y @netlify/mcp@latest --site-id cf415a79-b04b-42c1-944d-2b1c1cff1711 --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..i8pFbjyUtXgbzmgB.o1EjColTo0RhfTRQsmTsr7TWOVNespPeP781PWFLw4WO1Y7wnuXtI2NdzbIAFOnU507xdNPMB6B0pRpDFzm15Fc87bnivSjJeCXT68I-4QAiS0MCiHzq2fBz6OQU-nWKiZ82JH31n3Ph34Uzcvpc_NymrZ33US1VexIf3Vnv80d_7HHSkjw8ETM45iOULnf6EsrX1g94UurZwFbTElbkPt-ALNeDVfKJiwr_5vypvGnXlMw7gDWFeaQfrNnFNs1GdK2sd3dv22wOpfZIdAzy2D30EKsz1Zx5MMfVQNrmex2L4BoTas6B8Yz7B6C5je9mXUkOzLT9QPmGt_GdTigyNhWxH11WZa2dMnNlXVfIjGXCc5GItA.jFsMm5rKOkMnFkTW0wEw2A\")",
       "Bash(PATH=\"/Users/ebruengwall/.nvm/versions/node/v24.14.1/bin:$PATH\" npx -y @netlify/mcp@latest --site-id cf415a79-b04b-42c1-944d-2b1c1cff1711 --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..bIzRJNm0WCDz9rYg.-wAPSlB5nv8OmWalRUuJY3XZpOBPOYa7vb_fMCTYVpTC9-Na3i6kfcWkql9DVT2ba0ss3DYJIQ3iOKesyg958bXJkYIUTFGArTTyZXZBGm2EGX4VQhbXQXRiLkG5PTSQm6pPAzlfLH9aVhJrrsH_cTpD0mUfvHUS70bBzL09JPdfhzaFZ77SZMMi9QNQ7kisbSEZ19WVLBq-mPUDKTv5tHxN3kj8hLA3P3f7WiLV9x5W02zzXufFPI-xH-8-RubFrfdpru43DMgl_4ZSNMzAaThfkz5HDsBXF-r94NYehNnYJC0obtsyI2zr_9-_UvVoPMHAcFdfwpDdXpxLX_PjfEJcV2sjGPh44JP8MNU4_5z_9u-Tmw.VKjFNgFxunSreW5RMcCTug\")",
       "Bash(PATH=\"/Users/ebruengwall/.nvm/versions/node/v24.14.1/bin:$PATH\" npx -y @netlify/mcp@latest --site-id cf415a79-b04b-42c1-944d-2b1c1cff1711 --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..h5SvFZpL4_8kdTX4.C89o9VzQk9UZLkj4aDBI_ylG7yBni377auS4oiFakTWRI6mN_ik1z330cOxQFs5oP30NzqnUdLz4g3RVP6cLpLxXLAdKEQxjA6Uku-xIeZzE1_cGEAa0IigQ3_QTKJjCixKOlbbp7Pb7AIkWrdGAEoiPmjkg2juSp9_nnb9f0z7wsigVPCBwvcXrpgdHFW2qJljtGY3I5RN7TQ09-CXjHLwq6PtSi9tXUWDljoxLXqAGqgl-sPrBWKtwkDWJECjB_N97m_pKvVcso29iZIendJKRFyoCOE7MpVzHfy4YSqsc7yZqG_a2RorcQ2pdZBdQUp5vSXgEEYdcvvouOuJBCdqifBsHojzgS-kz6xeyLpeuhJy7Bg.ke9rpEOdjJTG_D2zsmoGug\")",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(npx -y @netlify/mcp@latest --site-id cf415a79-b04b-42c1-944d-2b1c1cff1711 --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..MihfYcGHCiI7M4l9.4ctoIpCBf1nGnP-Km-RP3AtQ4v4b4cdhN2TxHCuAv4BP36LvnflnM86ZacQJRvSGXLChgzRsh1_KN7JzL14ALHS8F5kHfy2EOFluVxIyXFmC03cfWJhS3pDGmdJr-qs_zAB62BphluX-7htTBMo-4Pry68FBbb4pYKgtNEQjHT4DpiLPucd-wPoNswXJnZK8JEoAZqRbX5jY8ewurTLHnbqlVYcKqDQzFzvQ_q2mkJoYXmeRV3PUd3461-QhdGCUWVCe11xHV8UoeCQGtL06jGqHzS0gA9T4BeTwIXH94aUgk7VxietqU9G6Sx4mOL8qJzjsPUd_PzjZ6gOw-hzFgyFMLNEiEtFFwIA_M3Slq46fQlbRqg.kv3c3fEgpa3_YlvM-eApMQ\")",
+      "Bash(npm run:*)",
+      "Bash(netlify deploy:*)",
+      "Bash(/usr/local/bin/npm run:*)",
+      "Bash(/Users/ebruengwall/.nvm/versions/node/v24.14.1/bin/npm run:*)",
+      "Bash(export PATH=\"$HOME/.nvm/versions/node/v24.14.1/bin:$PATH\")",
+      "Bash(npx netlify-cli:*)",
+      "Bash(export PATH=$HOME/.nvm/versions/node/v24.14.1/bin:$PATH)",
+      "Read(//Users/ebruengwall/node_modules/.bin/**)",
+      "Read(//Users/ebruengwall/.npm/**)",
+      "Read(//Users/ebruengwall/**)",
+      "Bash(npm install:*)",
+      "Bash(netlify status:*)",
+      "Bash(netlify login:*)"
     ]
   }
 }
