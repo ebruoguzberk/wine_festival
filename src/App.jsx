@@ -8,23 +8,30 @@ function useInView(options = {}) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    // Immediately visible if already in viewport on mount — fixes iOS Safari refresh delay
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight + 60) {
-      setIsVisible(true);
-      return;
-    }
-    // Fallback: force reveal after 800ms for anything IO misses
-    const fallback = setTimeout(() => setIsVisible(true), 800);
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
+    let raf, fallback, observer;
+    // Use rAF so check runs after paint/layout is complete (critical for iOS Safari)
+    raf = requestAnimationFrame(() => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 60) {
         setIsVisible(true);
-        clearTimeout(fallback);
-        observer.unobserve(el);
+        return;
       }
-    }, { threshold: options.threshold || 0.05, rootMargin: options.rootMargin || "0px 0px 60px 0px" });
-    observer.observe(el);
-    return () => { observer.disconnect(); clearTimeout(fallback); };
+      // Fallback: force reveal after 600ms for anything IO misses
+      fallback = setTimeout(() => setIsVisible(true), 600);
+      observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          clearTimeout(fallback);
+          observer.unobserve(el);
+        }
+      }, { threshold: options.threshold || 0.05, rootMargin: options.rootMargin || "0px 0px 60px 0px" });
+      observer.observe(el);
+    });
+    return () => {
+      cancelAnimationFrame(raf);
+      clearTimeout(fallback);
+      observer?.disconnect();
+    };
   }, []);
   return [ref, isVisible];
 }
@@ -515,12 +522,11 @@ function HeroScene() {
         opacity: 1 - p * 0.5,
       }} />
 
-      {/* Flying carpet IMAGE */}
+      {/* Flying carpet IMAGE — scroll wrapper separate from float animation */}
       <div style={{
         position: "absolute",
         left: "50%", top: "50%",
         transform: `translate(-50%, -50%) translateY(${-p * 60}px) scale(${1 - p * 0.3})`,
-        animation: "heroFloat 8s ease-in-out infinite",
         opacity: 1 - p * 0.8,
       }}>
         <img
@@ -531,6 +537,8 @@ function HeroScene() {
           style={{
             width: "min(420px, 85vw)",
             height: "auto",
+            display: "block",
+            animation: "heroFloat 8s ease-in-out infinite",
             filter: "drop-shadow(0 15px 30px rgba(0,0,0,0.5)) drop-shadow(0 0 40px rgba(212,175,55,0.12))",
           }}
         />

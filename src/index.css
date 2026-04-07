@@ -205,10 +205,10 @@ input::placeholder {
 
 /* ===== HERO FLOAT ===== */
 @keyframes heroFloat {
-  0%, 100% { transform: translate(-50%, -50%) translateY(0px) rotate(-1deg); }
-  25%       { transform: translate(-50%, -50%) translateY(-12px) rotate(1deg); }
-  50%       { transform: translate(-50%, -50%) translateY(-18px) rotate(-0.5deg); }
-  75%       { transform: translate(-50%, -50%) translateY(-8px) rotate(1.5deg); }
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  25%       { transform: translateY(-12px) rotate(1deg); }
+  50%       { transform: translateY(-18px) rotate(-0.5deg); }
+  75%       { transform: translateY(-8px) rotate(1.5deg); }
 }
 
 /* ===== TAB TRANSITION ===== */
