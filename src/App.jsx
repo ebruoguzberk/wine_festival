@@ -1272,14 +1272,26 @@ export default function PartyInvite() {
       <div style={{ position: "relative", zIndex: 2 }}>
         <Reveal>
           <div className="genie-lamp-scene" style={{ textAlign: "center", margin: "40px 0 20px", position: "relative" }}>
-            {/* Soft radial backdrop */}
-            <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "min(380px, 90vw)", height: "min(380px, 90vw)", borderRadius: "50%", background: "radial-gradient(circle, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.2) 50%, transparent 70%)", pointerEvents: "none" }} />
+            {/* Dark circle backdrop — strong black so fogs read clearly */}
+            <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "min(420px, 95vw)", height: "min(420px, 95vw)", borderRadius: "50%", background: "radial-gradient(circle, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.65) 35%, rgba(0,0,0,0.3) 60%, transparent 80%)", pointerEvents: "none", zIndex: 0 }} />
             {/* Genie + Lamp stacked naturally */}
-            <div style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", position: "relative" }}>
-              <img src="/genie.png" alt="" style={{ width: "180px", marginBottom: "-40px", animation: "lampFloat 5s ease-in-out infinite", filter: "drop-shadow(0 0 25px rgba(100,150,220,0.4))", position: "relative", zIndex: 1 }} />
-              <img src="/lamp.png" alt="" style={{ width: "110px", filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.4)) drop-shadow(0 0 20px rgba(212,175,55,0.2))", animation: "glowPulse 4s ease-in-out infinite", position: "relative", zIndex: 2 }} />
+            <div style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 2 }}>
+              {/* Fog particles rising from lamp */}
+              <div style={{ position: "absolute", bottom: "60px", left: "50%", zIndex: 3, pointerEvents: "none" }}>
+                <div style={{ position: "absolute", bottom: "0", left: "0", width: "50px", height: "50px", borderRadius: "50%", background: "radial-gradient(circle, rgba(100,160,240,0.5), rgba(160,120,220,0.25), transparent 70%)", animation: "fogPulse 3s ease-in-out infinite", filter: "blur(6px)" }} />
+                {[
+                  { w: 60, h: 45, bg: "rgba(100,150,220,0.45)", anim: "fogDrift1", dur: "4s", delay: "0s" },
+                  { w: 75, h: 55, bg: "rgba(140,120,220,0.38)", anim: "fogDrift2", dur: "5s", delay: "0.8s" },
+                  { w: 50, h: 40, bg: "rgba(100,160,240,0.42)", anim: "fogDrift3", dur: "3.5s", delay: "1.5s" },
+                  { w: 65, h: 48, bg: "rgba(120,140,230,0.35)", anim: "fogDrift4", dur: "4.5s", delay: "2.2s" },
+                ].map((p, i) => (
+                  <div key={i} className="fog-particle" style={{ width: `${p.w}px`, height: `${p.h}px`, background: `radial-gradient(ellipse, ${p.bg}, transparent 60%)`, filter: "blur(10px)", animation: `${p.anim} ${p.dur} ease-out ${p.delay} infinite` }} />
+                ))}
+              </div>
+              <img src="/genie.png" alt="" style={{ width: "180px", marginBottom: "-40px", animation: "lampFloat 5s ease-in-out infinite", filter: "drop-shadow(0 0 25px rgba(100,150,220,0.5))", position: "relative", zIndex: 1 }} />
+              <img src="/lamp.png" alt="" style={{ width: "110px", filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.5)) drop-shadow(0 0 24px rgba(212,175,55,0.3))", animation: "glowPulse 4s ease-in-out infinite", position: "relative", zIndex: 2 }} />
               {/* Glow under lamp */}
-              <div style={{ width: "120px", height: "14px", background: "radial-gradient(ellipse, rgba(212,175,55,0.25), transparent 70%)", borderRadius: "50%", marginTop: "-4px" }} />
+              <div style={{ width: "130px", height: "16px", background: "radial-gradient(ellipse, rgba(212,175,55,0.35), transparent 70%)", borderRadius: "50%", marginTop: "-4px" }} />
             </div>
           </div>
         </Reveal>
