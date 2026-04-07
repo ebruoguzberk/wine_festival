@@ -41,7 +41,24 @@
       "Bash(/opt/homebrew/bin/gh auth:*)",
       "Bash(git init:*)",
       "Bash(.gitignore:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(/opt/homebrew/bin/gh repo:*)",
+      "Bash(grep -E \"\\\\.\\(png|jpg|jpeg|svg|gif|webp\\)$\")",
+      "Bash(grep -r \"360_F_335870951\\\\|The_Genie_Aladdin\\\\|fairytale-persian\" /Users/ebruengwall/Documents/Cowork/wine_festival/src /Users/ebruengwall/Documents/Cowork/wine_festival/*.jsx /Users/ebruengwall/Documents/Cowork/wine_festival/*.html /Users/ebruengwall/Documents/Cowork/wine_festival/src/*.css)",
+      "Bash(grep -E \"\\\\.\\(png|jpg|jpeg|svg\\)$\")",
+      "Bash(grep -r \"carpet.png\" src/ *.jsx *.html)",
+      "Bash(grep -r \"carpet.jpg\" src/ *.jsx *.html)",
+      "Bash(grep -r \"genie.png\" src/ *.jsx *.html)",
+      "Bash(grep -r \"lamp.png\" src/ *.jsx *.html)",
+      "Bash(grep -r \"favicon.svg\" src/ *.jsx *.html)",
+      "Bash(grep -r \"icons.svg\" src/ *.jsx *.html)",
+      "Bash(grep -r \"hero.png\" src/ *.jsx *.html)",
+      "Bash(grep -r \"react.svg\" src/ *.jsx *.html)",
+      "Bash(grep -r \"vite.svg\" src/ *.jsx *.html)",
+      "Bash(grep -r \"360_F_335870951\" src/ *.jsx *.html)",
+      "Bash(grep -r \"The_Genie_Aladdin\" src/ *.jsx *.html)",
+      "Bash(grep -r \"fairytale-persian\" src/ *.jsx *.html)"
     ]
   }
 }
