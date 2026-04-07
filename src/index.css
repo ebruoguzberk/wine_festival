@@ -24,21 +24,13 @@ body {
   margin: 0;
   background: linear-gradient(
     180deg,
-    #0a0a12 0%,
-    #0e0c18 8%,
-    #100e1a 15%,
-    #1a1028 25%,
-    #1c1322 32%,
-    #1e1518 38%,
-    #221812 45%,
-    #2a1a12 52%,
-    #2a1c14 58%,
-    #281a14 62%,
-    #221814 68%,
-    #1a1410 75%,
-    #14100e 82%,
-    #0e0c14 90%,
-    #0a0a12 100%
+    #06081a 0%,      /* night — deep indigo */
+    #0d0b2e 18%,
+    #1a0a38 33%,     /* deep purple dusk */
+    #3d1408 50%,     /* sunset — deep amber-red */
+    #2a1428 67%,     /* transition */
+    #1a0820 82%,     /* sunrise — rose dark */
+    #0d0618 100%     /* back to night */
   );
   background-attachment: fixed;
   background-size: cover;
