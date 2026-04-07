@@ -1275,7 +1275,7 @@ export default function PartyInvite() {
         <Reveal>
           <div className="genie-lamp-scene" style={{ textAlign: "center", margin: "20px 0", position: "relative", height: "200px" }}>
             {/* Dark circle backdrop to make genie+lamp pop */}
-            <div style={{ position: "absolute", bottom: "-120px", left: "48%", transform: "translateX(-50%)", width: "620px", height: "620px", borderRadius: "50%", background: "radial-gradient(circle, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.15) 55%, transparent 75%)", pointerEvents: "none" }} />
+            <div style={{ position: "absolute", bottom: "-180px", left: "48%", transform: "translateX(-50%)", width: "620px", height: "620px", borderRadius: "50%", background: "radial-gradient(circle, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.15) 55%, transparent 75%)", pointerEvents: "none" }} />
             <MagicSmoke />
             <img src="/lamp.png" alt="" style={{ position: "absolute", width: "120px", bottom: "0", left: "50%", transform: "translateX(-50%)", filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.3)) drop-shadow(0 0 20px rgba(212,175,55,0.15))", animation: "glowPulse 4s ease-in-out infinite", zIndex: 1 }} />
             <img src="/genie.png" alt="" style={{ position: "absolute", width: "150px", bottom: "-50px", left: "44%", animation: "heroFloat 5s ease-in-out infinite", filter: "drop-shadow(0 0 25px rgba(100,150,220,0.35))", zIndex: 0 }} />
