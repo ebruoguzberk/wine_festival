@@ -526,6 +526,8 @@ function HeroScene() {
         <img
           src="/carpet.png"
           alt="Flying Carpet"
+          width="420"
+          height="240"
           style={{
             width: "min(420px, 85vw)",
             height: "auto",
@@ -1297,8 +1299,8 @@ export default function PartyInvite() {
                   <div key={i} className="fog-particle" style={{ width: `${p.w}px`, height: `${p.h}px`, background: `radial-gradient(ellipse, ${p.bg}, transparent 60%)`, filter: "blur(10px)", animation: `${p.anim} ${p.dur} ease-out ${p.delay} infinite` }} />
                 ))}
               </div>
-              <img src="/genie.png" alt="" style={{ width: "180px", marginBottom: "-40px", animation: "lampFloat 5s ease-in-out infinite", filter: "drop-shadow(0 0 25px rgba(100,150,220,0.5))", position: "relative", zIndex: 1 }} />
-              <img src="/lamp.png" alt="" style={{ width: "110px", filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.5)) drop-shadow(0 0 24px rgba(212,175,55,0.3))", animation: "glowPulse 4s ease-in-out infinite", position: "relative", zIndex: 2 }} />
+              <img src="/genie.png" alt="" width="180" height="220" style={{ width: "180px", height: "auto", marginBottom: "-40px", animation: "lampFloat 5s ease-in-out infinite", filter: "drop-shadow(0 0 25px rgba(100,150,220,0.5))", position: "relative", zIndex: 1 }} />
+              <img src="/lamp.png" alt="" width="110" height="80" style={{ width: "110px", height: "auto", filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.5)) drop-shadow(0 0 24px rgba(212,175,55,0.3))", animation: "glowPulse 4s ease-in-out infinite", position: "relative", zIndex: 2 }} />
               {/* Glow under lamp */}
               <div style={{ width: "130px", height: "16px", background: "radial-gradient(ellipse, rgba(212,175,55,0.35), transparent 70%)", borderRadius: "50%", marginTop: "-4px" }} />
             </div>

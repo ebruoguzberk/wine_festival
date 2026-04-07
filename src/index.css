@@ -205,11 +205,10 @@ input::placeholder {
 
 /* ===== HERO FLOAT ===== */
 @keyframes heroFloat {
-  0%, 100% { transform: translate(-50%, -50%) perspective(600px) rotateX(18deg) rotateY(-2deg) translateY(0); }
-  20% { transform: translate(-50%, -50%) perspective(600px) rotateX(14deg) rotateY(3deg) translateY(-14px); }
-  40% { transform: translate(-50%, -50%) perspective(600px) rotateX(20deg) rotateY(-1deg) translateY(-6px); }
-  60% { transform: translate(-50%, -50%) perspective(600px) rotateX(12deg) rotateY(4deg) translateY(-18px); }
-  80% { transform: translate(-50%, -50%) perspective(600px) rotateX(16deg) rotateY(-3deg) translateY(-8px); }
+  0%, 100% { transform: translate(-50%, -50%) translateY(0px) rotate(-1deg); }
+  25%       { transform: translate(-50%, -50%) translateY(-12px) rotate(1deg); }
+  50%       { transform: translate(-50%, -50%) translateY(-18px) rotate(-0.5deg); }
+  75%       { transform: translate(-50%, -50%) translateY(-8px) rotate(1.5deg); }
 }
 
 /* ===== TAB TRANSITION ===== */
