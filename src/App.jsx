@@ -799,33 +799,32 @@ function WineTastingTab() {
         <span style={{ fontSize: '11px', color: 'var(--dust)', opacity: 0.5 }}>{totalAll - totalClaimed} of {totalAll} left</span>
       </div>
 
-      {/* Category filter - single row */}
-      <div style={{ display: 'flex', gap: '2px', marginBottom: '20px', overflowX: 'auto', WebkitOverflowScrolling: 'touch', alignItems: 'center', maxWidth: '100vw' }}>
+      {/* Category filter - wrapping rows, no horizontal scroll */}
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '20px' }}>
         {cats.map((cat) => {
           const active = activeCat === cat && !showCustomForm;
           const tc = catMeta[cat];
           const catAvail = concepts[cat].filter(c => !isClaimed(c.title)).length;
           return (
             <button key={cat} onClick={() => { setActiveCat(cat); setSelected(null); setShowClaimForm(false); setShowCustomForm(false); }} style={{
-              padding: '6px 12px', border: 'none',
-              borderRadius: '6px',
-              background: active ? `${tc.accent}18` : 'transparent',
+              padding: '7px 14px', border: active ? `1px solid ${tc.accent}44` : '1px solid rgba(255,255,255,0.08)',
+              borderRadius: '20px',
+              background: active ? `${tc.accent}18` : 'rgba(255,255,255,0.04)',
               color: active ? tc.accent : 'var(--dust)',
               fontSize: '11px', letterSpacing: '1px',
               fontFamily: 'var(--font-display)', fontWeight: '500',
               cursor: 'pointer', transition: 'all 0.2s ease',
-              opacity: active ? 1 : 0.5,
+              opacity: active ? 1 : 0.6,
               whiteSpace: 'nowrap',
             }}>
               {cat}{catAvail < 6 ? ` (${catAvail})` : ''}
             </button>
           );
         })}
-        <div style={{ width: '1px', height: '16px', background: 'rgba(255,255,255,0.1)', margin: '0 6px', flexShrink: 0 }} />
         <button onClick={() => { setShowCustomForm(true); setSelected(null); setShowClaimForm(false); }} style={{
-          padding: '6px 12px', border: showCustomForm ? '1px solid rgba(212,175,55,0.4)' : '1px dashed rgba(212,175,55,0.25)',
-          borderRadius: '6px',
-          background: showCustomForm ? 'rgba(212,175,55,0.1)' : 'transparent',
+          padding: '7px 14px', border: showCustomForm ? '1px solid rgba(212,175,55,0.4)' : '1px dashed rgba(212,175,55,0.25)',
+          borderRadius: '20px',
+          background: showCustomForm ? 'rgba(212,175,55,0.1)' : 'rgba(255,255,255,0.02)',
           color: 'var(--gold)',
           fontSize: '11px', letterSpacing: '1px',
           fontFamily: 'var(--font-display)', fontWeight: '500',
