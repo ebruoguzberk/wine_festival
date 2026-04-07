@@ -8,8 +8,14 @@ function useInView(options = {}) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    // Fallback: reveal after 2.5s in case IntersectionObserver doesn't fire (iOS Safari)
-    const fallback = setTimeout(() => setIsVisible(true), 2500);
+    // Immediately visible if already in viewport on mount — fixes iOS Safari refresh delay
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight + 60) {
+      setIsVisible(true);
+      return;
+    }
+    // Fallback: force reveal after 800ms for anything IO misses
+    const fallback = setTimeout(() => setIsVisible(true), 800);
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
