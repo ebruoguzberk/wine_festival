@@ -1272,8 +1272,8 @@ export default function PartyInvite() {
       <div style={{ position: "relative", zIndex: 2 }}>
         <Reveal>
           <div className="genie-lamp-scene" style={{ textAlign: "center", margin: "40px 0 20px", position: "relative" }}>
-            {/* Dark circle backdrop — strong black so fogs read clearly */}
-            <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "min(420px, 95vw)", height: "min(420px, 95vw)", borderRadius: "50%", background: "radial-gradient(circle, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.65) 35%, rgba(0,0,0,0.3) 60%, transparent 80%)", pointerEvents: "none", zIndex: 0 }} />
+            {/* Subtle dark glow — just enough to pop the genie/lamp and fogs */}
+            <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "min(420px, 95vw)", height: "min(420px, 95vw)", borderRadius: "50%", background: "radial-gradient(circle, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.1) 65%, transparent 80%)", pointerEvents: "none", zIndex: 0 }} />
             {/* Genie + Lamp stacked naturally */}
             <div style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 2 }}>
               {/* Fog particles rising from lamp */}

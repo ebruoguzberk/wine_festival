@@ -29,17 +29,27 @@ body {
   margin: 0;
   background: linear-gradient(
     180deg,
-    #06081a 0%,      /* Night — deep indigo */
-    #0d0b2e 10%,
+    #06081a 0%,
+    #09091f 3%,
+    #0d0b2e 8%,
+    #120d34 13%,
     #1a0a38 20%,
-    #2e0e1a 33%,     /* transition to sunset */
-    #3d1408 45%,     /* Sunset — deep amber */
-    #4a1a06 50%,     /* peak sunset */
+    #250e28 27%,
+    #2e0e1a 33%,
+    #361008 39%,
+    #3d1408 45%,
+    #441708 48%,
+    #4a1a06 50%,
+    #441708 52%,
     #3d1408 55%,
-    #2a1020 67%,     /* transition to sunrise */
-    #1e0828 78%,     /* Sunrise — deep rose */
+    #341220 61%,
+    #2a1020 67%,
+    #221026 72%,
+    #1e0828 78%,
+    #221034 83%,
     #2a1040 88%,
-    #0d0618 100%     /* back to deep night */
+    #1a0a28 94%,
+    #0d0618 100%
   );
   background-attachment: scroll;
   font-family: var(--font-body);
