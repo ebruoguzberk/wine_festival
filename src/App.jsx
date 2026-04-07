@@ -1215,15 +1215,13 @@ function Expandable({ title, icon, children }) {
 
 export default function PartyInvite() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--night)", position: "relative" }}>
+    <div style={{ minHeight: "100vh", position: "relative" }}>
       <CursorGlow />
       <StarField />
       <FloatingParticles />
       <ShootingStars />
       <ScrollProgress />
 
-      {/* Single continuous sky gradient - no seams */}
-      <div className="sky-gradient" />
 
       {/* Gold line */}
       <div style={{ height: "2px", background: "linear-gradient(90deg, transparent, var(--gold), transparent)", opacity: 0.4, position: "relative", zIndex: 2 }} />
