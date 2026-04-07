@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  background: #06081a; /* matches top of body gradient — prevents black flash */
+}
+
 :root {
   --gold: #D4AF37;
   --gold-light: #f0d878;

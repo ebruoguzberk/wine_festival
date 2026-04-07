@@ -496,11 +496,11 @@ function HeroScene() {
   const p = Math.min(scrollY / 400, 1);
 
   return (
-    <div style={{ position: "relative", width: "100%", height: "280px", marginBottom: "10px", overflow: "visible" }}>
+    <div style={{ position: "relative", width: "100%", height: "280px", marginBottom: "10px", overflow: "hidden" }}>
       {/* Radial glow behind carpet */}
       <div style={{
         position: "absolute", top: "50%", left: "50%",
-        width: "700px", height: "400px",
+        width: "min(700px, 100vw)", height: "400px",
         transform: `translate(-50%, -50%) scale(${1 + p * 0.3})`,
         background: "radial-gradient(ellipse, rgba(212,175,55,0.15) 0%, rgba(180,60,40,0.08) 30%, rgba(140,80,200,0.05) 50%, transparent 70%)",
         opacity: 1 - p * 0.5,
@@ -789,7 +789,7 @@ function WineTastingTab() {
       </div>
 
       {/* Category filter - single row */}
-      <div style={{ display: 'flex', gap: '2px', marginBottom: '20px', overflowX: 'auto', WebkitOverflowScrolling: 'touch', alignItems: 'center' }}>
+      <div style={{ display: 'flex', gap: '2px', marginBottom: '20px', overflowX: 'auto', WebkitOverflowScrolling: 'touch', alignItems: 'center', maxWidth: '100vw' }}>
         {cats.map((cat) => {
           const active = activeCat === cat && !showCustomForm;
           const tc = catMeta[cat];
@@ -1271,9 +1271,9 @@ export default function PartyInvite() {
       {/* === GENIE DIVIDER + GAMES === */}
       <div style={{ position: "relative", zIndex: 2 }}>
         <Reveal>
-          <div className="genie-lamp-scene" style={{ textAlign: "center", margin: "20px 0", position: "relative", height: "200px" }}>
+          <div className="genie-lamp-scene" style={{ textAlign: "center", margin: "20px 0", position: "relative", height: "200px", overflow: "hidden" }}>
             {/* Dark circle backdrop to make genie+lamp pop */}
-            <div style={{ position: "absolute", bottom: "-180px", left: "48%", transform: "translateX(-50%)", width: "620px", height: "620px", borderRadius: "50%", background: "radial-gradient(circle, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.15) 55%, transparent 75%)", pointerEvents: "none" }} />
+            <div style={{ position: "absolute", bottom: "-180px", left: "48%", transform: "translateX(-50%)", width: "min(620px, 100vw)", height: "min(620px, 100vw)", borderRadius: "50%", background: "radial-gradient(circle, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.15) 55%, transparent 75%)", pointerEvents: "none" }} />
             <MagicSmoke />
             <img src="/lamp.png" alt="" style={{ position: "absolute", width: "120px", bottom: "0", left: "50%", transform: "translateX(-50%)", filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.3)) drop-shadow(0 0 20px rgba(212,175,55,0.15))", animation: "glowPulse 4s ease-in-out infinite", zIndex: 1 }} />
             <img src="/genie.png" alt="" style={{ position: "absolute", width: "150px", bottom: "-50px", left: "44%", animation: "heroFloat 5s ease-in-out infinite", filter: "drop-shadow(0 0 25px rgba(100,150,220,0.35))", zIndex: 0 }} />
