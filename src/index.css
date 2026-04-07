@@ -555,7 +555,7 @@ input::placeholder {
 
 /* ===== CONTINUOUS SKY GRADIENT ===== */
 .sky-gradient {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -565,20 +565,17 @@ input::placeholder {
   background: linear-gradient(
     180deg,
     #0a0a12 0%,        /* deep night - hero */
-    #0e0c18 8%,
-    #100e1a 15%,        /* midnight - wine tasting */
-    #1a1028 25%,
-    #1c1322 32%,        /* purple transition */
-    #1e1518 38%,
-    #221812 45%,        /* sunset warm */
-    #2a1a12 52%,
-    #2a1c14 58%,        /* warmest - lanterns */
-    #281a14 62%,
-    #221814 68%,        /* golden hour - dress code */
-    #1a1410 75%,
-    #14100e 82%,        /* cooling down */
-    #0e0c14 90%,
-    #0a0a12 100%        /* back to night - art */
+    #1a1028 5%,
+    #1e1518 10%,       /* purple transition */
+    #221812 15%,       /* sunset warm — visible above fold */
+    #2a1a12 22%,
+    #2a1c14 28%,       /* warmest - lanterns */
+    #281a14 34%,
+    #221814 40%,       /* golden hour - dress code */
+    #1a1410 52%,
+    #14100e 65%,       /* cooling down */
+    #0e0c14 82%,
+    #0a0a12 100%       /* back to night - art */
   );
 }
 
