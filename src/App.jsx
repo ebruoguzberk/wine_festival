@@ -1271,7 +1271,7 @@ export default function PartyInvite() {
       {/* === GENIE DIVIDER + GAMES === */}
       <div style={{ position: "relative", zIndex: 2 }}>
         <Reveal>
-          <div className="genie-lamp-scene" style={{ textAlign: "center", margin: "20px 0", position: "relative", height: "200px", overflow: "hidden" }}>
+          <div className="genie-lamp-scene" style={{ textAlign: "center", margin: "20px 0", position: "relative", height: "200px" }}>
             {/* Dark circle backdrop to make genie+lamp pop */}
             <div style={{ position: "absolute", bottom: "-180px", left: "48%", transform: "translateX(-50%)", width: "min(620px, 100vw)", height: "min(620px, 100vw)", borderRadius: "50%", background: "radial-gradient(circle, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.15) 55%, transparent 75%)", pointerEvents: "none" }} />
             <MagicSmoke />
